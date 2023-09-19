@@ -6,7 +6,7 @@
         {
             //Huvudmeny
 
-            bool a = false;
+            bool a = false; // Använder denna till do-while loopen för att visa att användaren valt alt. 0 Quit
 
             do
             {
@@ -140,7 +140,15 @@
 
                         string[] words = user3wordSentence.Split(' ');
 
-                        Console.Write("\nThe third word you wrote was: " + words[2] + "\n");
+                        if (words.Length >= 2)
+                        {
+                            Console.Write("\nThe third word you wrote was: " + words[2] + "\n");
+                        }
+                        else
+                        {
+                            Console.Write("Invalid input\n");
+                        }
+                            
 
                         break;
 
